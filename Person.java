@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package day3;
+package day4;
 
 import java.util.Scanner;
 
@@ -18,6 +18,35 @@ public class Person {
     int age;
     char gender;
     Scanner in = new Scanner(System.in);
+    
+    //default constructor
+    Person(){
+        this.name = "Unknown";
+        this.address = "Unknown";
+        this.phoneNo = "Unknown";
+        this.age = 1;
+        this.gender = 'U';
+                
+    }
+    
+    //parameterized constructor
+    Person(String name, String address, String phoneNo, char gender, int age){
+        this.name = name;
+        this.address = address;
+        this.phoneNo = phoneNo;
+        this.gender = gender;
+        this.age = age;
+        
+    }
+    
+    //copy constructor
+    Person(Person anotherPerson){
+        this.name = anotherPerson.name;
+        this.address = anotherPerson.address;
+        this.phoneNo = anotherPerson.phoneNo;
+        this.gender = anotherPerson.gender;
+        this.age = anotherPerson.age;
+    }
     
     void setName(){
         
